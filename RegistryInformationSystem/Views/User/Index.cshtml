@@ -1,0 +1,26 @@
+﻿@model RegistryInformationSystem.Models.Register.Register
+
+@{
+    ViewBag.Title = "Welcome";
+    string nameOfUser = Session["LoginEmail"].ToString();
+}
+
+
+@using (Html.BeginForm())
+{   
+<div>
+    Username: @nameOfUser
+    @Html.ActionLink("Sign Out", "SessionClear", "Login", null, new { @class = "btn btn-danger float-right" })
+    <hr />
+    <br />
+    <div class="text-center">
+        <br />
+        <h1>Welcome</h1>
+        <br />
+        <br />
+        <h3>Click button to access information about your computer</h3>
+        <br />
+        @Html.ActionLink("Show Computer Softwares", "Details", "ComputerSoftware", null, new { @class = "btn btn-success" })
+    </div>
+</div>
+}

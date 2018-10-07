@@ -1,0 +1,26 @@
+﻿@model IEnumerable<RegistryInformationSystem.Models.ComputerSystem.ComputerSystem>
+
+@*@(Html.Kendo().Grid(Model)
+    .Name("computerSoftwareGrid")
+    .Columns(columns =>
+    {
+        columns.Bound(c => c.Name).Width(180);
+        columns.Bound(c => c.Type).Width(70).Format("{0:dd/MM/yyyy}");
+        columns.Bound(c => c.IsLocal).Width(60);
+        columns.Bound(c => c.IsArray).Width(60);
+        columns.Bound(c => c.Origin).Width(140);
+        columns.Bound(c => c.Qualifiers).Width(210);
+
+    })
+    .Groupable()
+    .Sortable()
+    .Selectable()
+    .Filterable()
+    .Scrollable()
+    .HtmlAttributes(new { style = "height:500px; width:1200px; font-size: 13px" })
+    .DataSource(datasource => datasource
+        .Ajax()
+        .ServerOperation(false)
+        .Read(read => read.Action("GetSystemInformation", "ComputerSystem"))
+        )
+)*@

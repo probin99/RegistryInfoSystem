@@ -1,0 +1,67 @@
+﻿@model IEnumerable<RegistryInformationSystem.Models.Software.ComputerSoftware>
+
+@{
+     ViewBag.Title = "Details";
+}
+<div>
+    @{
+        string computerName = Environment.MachineName;
+    }
+    <br />
+    <p>
+        <b>Computer Name: @Html.Label("ComputerName:{0}", computerName)</b>
+    </p>
+    <hr />
+</div>
+<div>
+    <table class="table table-responsive table-hover small" style="height:550px;">
+        <tr>
+            <th class="h5">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th class="h5">
+                @Html.DisplayNameFor(model => model.Publisher)
+            </th>
+            <th class="h5">
+                @Html.DisplayNameFor(model => model.InstalledOn)
+            </th>
+            <th class="h5">
+                @Html.DisplayNameFor(model => model.Size)
+            </th>
+            <th class="h5">
+                @Html.DisplayNameFor(model => model.Version)
+            </th>
+            <th class="h5">
+                @Html.DisplayNameFor(model => model.InstalledLocation)
+            </th>
+            <th class="h5">Action</th>
+        </tr>
+ 
+        @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Publisher)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InstalledOn)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Size) MB
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Version)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InstalledLocation)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Uninstall", "Uninstall", new { id = item.SoftwareID })
+                    </td>
+                </tr>
+            }
+        </table>
+</div>

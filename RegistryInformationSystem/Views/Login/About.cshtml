@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>
+    @(Html.Label("About Us"))
+</h4>
+<hr>
+<div>
+    <div style="margin-left:auto; margin-right:auto;text-align:center; width:800px; text-align:justify;">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consectetur euismod velit, ac commodo elit faucibus nec. Nullam elementum quam nisl, non commodo nibh ultricies ut. Aliquam vel elementum lacus. Quisque pharetra augue sit amet nisi sodales porta eu vitae urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consectetur euismod velit, ac commodo elit faucibus nec. Nullam elementum quam nisl, non commodo nibh ultricies ut. Aliquam vel elementum lacus. Quisque pharetra augue sit amet nisi sodales porta eu vitae urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consectetur euismod velit.
+        </p>
+    </div>
+</div>
+<div class="mapouter" style="display: block; margin-left: auto; margin-right: auto;">
+    <div class="gmap_canvas">
+    <iframe width="600" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=Sydney&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        </iframe>
+    <a href="https://www.crocothemes.net"></a>
+    </div>
+    <style>
+        .mapouter {
+            text-align: right;
+            height: 350px;
+            width: 600px;
+        }
+
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 350px;
+            width: 600px;
+        }
+    </style>
+</div>
