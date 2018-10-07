@@ -20,6 +20,11 @@ namespace RegistryInformationSystem.Controllers
         // GET: ComputerSoftware/Details
         public ActionResult Details()
         {
+            if (db.ComputerSoftwares.Count() == 0)
+            {
+                GetAllComputerSoftwares getAllComputerSoftwares = new GetAllComputerSoftwares();
+                getAllComputerSoftwares.ReadRegistryForSoftwareWMI();
+            }
             List<ComputerSoftware> SoftwareFromDB = new List<ComputerSoftware>(db.ComputerSoftwares);
             if (SoftwareFromDB.Count() > 0)
             {
