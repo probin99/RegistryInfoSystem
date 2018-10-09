@@ -234,8 +234,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\ComputerSoftware\Details.cshtml" />
-    <Content Include="Views\ComputerSystem\GetSystemInformation.cshtml" />
-    <Content Include="Views\ComputerSystem\Index.cshtml" />
     <Content Include="Views\Login\About.cshtml" />
     <Content Include="Views\Login\Contact.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
